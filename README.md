@@ -8,14 +8,14 @@ Azure Functions の TimerTrigger で定期実行させるように構成され�
 https://rss-to-site-creator-sample.netlify.app/sample.html
 
 ## 環境変数
-- SCHEDULE_EXPRESSION (既定値: :"0 5 */12 * * *")
+- SCHEDULE_EXPRESSION
   - [NCRONTAB式](https://docs.microsoft.com/ja-jp/azure/azure-functions/functions-bindings-timer?tabs=csharp#ncrontab-expressions)で実行間隔を指定します
 - RssSiteUrls
   - 読み取り先 RSS の URL を指定します
   - セミコロン区切りで複数指定に対応します
-- SummaryLimit
+- SummaryLimit(既定値: : 200)
   - サマリの文字数の上限を指定します
-- Site:PostsLimit
+- Site:PostsLimit(既定値: : 40)
   - サイトに出力するポスト数を指定します
 - Netlify:AccessToken
   - Netlify のアクセストークンを指定します
