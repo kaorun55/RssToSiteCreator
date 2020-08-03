@@ -3,6 +3,7 @@
   "Values": {
     "AzureWebJobsStorage": "UseDevelopmentStorage=true",
     "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "SCHEDULE_EXPRESSION": "0 5 */12 * * *",
     "RssSiteUrls": "",
     "SummaryLimit": "200",
     "Site:PostsLimit": "40",

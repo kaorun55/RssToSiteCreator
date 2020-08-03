@@ -35,7 +35,7 @@ namespace RssToSiteCreator
         }
 
         [FunctionName("RssToSiteCreatorFunction")]
-        public async Task Run([TimerTrigger("0 5 */12 * * *", RunOnStartup = true)]TimerInfo myTimer, ILogger log)
+        public async Task Run([TimerTrigger("%SCHEDULE_EXPRESSION%", RunOnStartup = true)]TimerInfo myTimer, ILogger log)
         {
             log.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
 
