@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blogs sensor</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css"/>
+    <link rel="stylesheet" href="/css/sample.css" />
+</head>
+<body>
+    <div class="header">
+        <h1>Blogs Sensor</h1>
+        <div>from</div>
+        @foreach(var author in Model.Authors) {
+            <a class="pure-button" href="@author.AuthorUrl">@author.Author</a>
+        }
+    </div>
+
+    <div class="posts">
+        <div class="pure-g">
+            @foreach(var post in Model.Posts) {
+                <div class="pure-u-1 pure-u-md-1-3">
+                    <div class="card">
+                        <a href="@post.Url">
+                            <div class="image">
+                                @if(post.ImageUrl != null) {
+                                <img class="image" src="@post.ImageUrl">
+                                } else {
+                                <img class="image" src="images/hololab_logo.png">
+                                }
+                            </div>
+                            <div class="date-author">@post.PublishDate.ToString("yyyy/MM/dd") - @post.Author</div>
+                            <h2>@post.Title</h2>
+                            <div class="summary">@post.Summary</div>
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</body>
+</html>

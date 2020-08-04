@@ -13,6 +13,11 @@
     <PackageReference Include="RazorEngine.NetCore" Version="3.1.0" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Static\images\hololab_logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
     <None Update="host.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -27,7 +32,10 @@
     <None Update="Static\css\sample.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Templates\sample.html">
+    <None Update="Static\images\hololab_logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Templates\index.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
