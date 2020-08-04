@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="/css/sample.css" />
 </head>
 <body>
-    <div class="header">
+    <!--<div class="header">
         <h1>Blogs Sensor</h1>
         <div>from</div>
         @foreach(var author in Model.Authors) {
             <a class="pure-button" href="@author.AuthorUrl">@author.Author</a>
         }
-    </div>
+    </div>-->
 
     <div class="posts">
         <div class="pure-g">
@@ -31,8 +31,8 @@
                                 }
                             </div>
                             <div class="date-author">@post.PublishDate.ToString("yyyy/MM/dd") - @post.Author</div>
-                            <h2>@post.Title</h2>
-                            <div class="summary">@post.Summary</div>
+                            <h4>@post.Title</h4>
+                            <!--<div class="summary">@post.Summary</div>-->
                         </a>
                     </div>
                 </div>
